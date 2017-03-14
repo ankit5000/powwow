@@ -8,13 +8,12 @@
     tools:context="com.example.ankit.powwow.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <SearchView
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:background="@android:color/holo_blue_bright"
+        android:padding="3dp"
+        android:queryHint="Search for a place"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="112dp" />
 </android.support.constraint.ConstraintLayout>
