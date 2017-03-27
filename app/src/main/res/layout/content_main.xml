@@ -8,12 +8,13 @@
     tools:context="com.example.ankit.powwow.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <SearchView
-        android:layout_width="250dp"
+    <TextView
+        android:id="@+id/nearby"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_bright"
-        android:padding="3dp"
-        android:queryHint="Search for a place"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="112dp" />
+        android:text="Nearby"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="319dp" />
+
 </android.support.constraint.ConstraintLayout>
