@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity
             if (resultCode == RESULT_OK){
                 Place place = PlacePicker.getPlace(data,this);           // see this
                 //String name = String.format("Name: ",place.getName());
-                String address = String.format("Place: ",place.getAddress());
+                String address = String.format("Place: %s",place.getAddress());
                 nearby.setText(address);
             }
 
