@@ -8,19 +8,9 @@
     tools:context="com.example.ankit.powwow.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-<<<<<<< HEAD
-    <TextView
-        android:id="@+id/nearby"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nearby"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="93dp" />
-=======
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -64,6 +54,5 @@
             android:text="Phone no."
             android:textSize="20sp" />
     </RelativeLayout>
->>>>>>> photos
 
 </android.support.constraint.ConstraintLayout>
