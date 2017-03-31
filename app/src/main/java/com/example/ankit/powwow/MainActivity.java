@@ -1,11 +1,7 @@
 package com.example.ankit.powwow;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,15 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
 
-import android.support.v4.app.FragmentActivity;
+import android.widget.Button;
 import android.widget.TextView;
 
 /*public class MyActivity extends FragmentActivity
@@ -59,8 +52,12 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private TextView nearby;
+    private Button nearby;
+    private TextView name;
+    private TextView address;
+    private TextView phone;
     int place_picker_request = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +66,12 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        nearby = (TextView)findViewById(R.id.nearby);
+        nearby = (Button)findViewById(R.id.nearby);
+        name = (TextView)findViewById(R.id.name);
+        address = (TextView)findViewById(R.id.address);
+        phone = (TextView)findViewById(R.id.phone);
+
+
         nearby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,13 +106,17 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("deprecation")
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
+
         if (requestCode == place_picker_request){
 
             if (resultCode == RESULT_OK){
                 Place place = PlacePicker.getPlace(data,this);           // see this
-                //String name = String.format("Name: ",place.getName());
-                String address = String.format("Place: %s",place.getAddress());
-                nearby.setText(address);
+                String nameString = String.format("Name: %s",place.getName());
+                String addressString = String.format("Address: %s",place.getAddress());
+                String phoneString = String.format("Phone No.: %s",place.getPhoneNumber());
+                name.setText(nameString);
+                address.setText(addressString);
+                phone.setText(phoneString);
             }
 
         }

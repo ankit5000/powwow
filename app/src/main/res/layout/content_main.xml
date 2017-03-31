@@ -8,6 +8,7 @@
     tools:context="com.example.ankit.powwow.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+<<<<<<< HEAD
     <TextView
         android:id="@+id/nearby"
         android:layout_width="wrap_content"
@@ -16,5 +17,53 @@
         android:textSize="30sp"
         tools:layout_editor_absoluteX="145dp"
         tools:layout_editor_absoluteY="93dp" />
+=======
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:text="Nearby" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Name"
+            android:layout_below="@id/nearby"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_margin="5dp"
+            android:text="Address"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address"
+            android:layout_margin="5dp"
+            android:text="Phone no."
+            android:textSize="20sp" />
+    </RelativeLayout>
+>>>>>>> photos
 
 </android.support.constraint.ConstraintLayout>
