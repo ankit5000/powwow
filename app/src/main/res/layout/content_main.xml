@@ -15,6 +15,6 @@
         android:text="Nearby"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="319dp" />
+        tools:layout_editor_absoluteY="93dp" />
 
 </android.support.constraint.ConstraintLayout>
